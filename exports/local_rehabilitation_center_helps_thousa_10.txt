@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:14:50
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This assistive system can thoughtfully integrate material stasis and kinetic separation to create an intuitive energy director that effectively accesses internal masses without causing damage to the boundary perimeters. Designed to handle continuous singular inputs, these dynamic pathways seamlessly blend force distribution and directional shifts to optimize steady barrier displacement and ensure rapid spatial access. To ensure practical manufacturing, physical modifiers like resistance zones, kinetic amplifiers, and energy receivers can be configured to guarantee constant positional stasis and remarkable mechanical advantage. A highly adaptable interaction zone allows users to translate singular kinetic inputs into effective spatial separation, actively maximizing operational autonomy while minimizing perimeter disruptions. Ultimately, by exploring distinct force vectors and accessible matter configurations, the design delivers a reliable, inventive, and truly affordable physical intervention.
+
+MC Stimulus:
+This assistive system can thoughtfully integrate base clamping and rotational decoupling to create an intuitive mechanical assembly that effectively accesses stored volumes without causing damage to the external housings. Designed to handle continuous unilateral pushes, these linkage systems seamlessly blend pressure points and pivoting axes to optimize steady seal separation and ensure rapid payload entry. To ensure practical manufacturing, stabilizing modules like clamping jaws, geared ratchets, and tactile interfaces can be configured to guarantee constant secure anchoring and remarkable torque multiplication. A highly adaptable operating setup allows users to translate unilateral user actions into effective rotational release, actively maximizing independent usage while minimizing housing fractures. Ultimately, by exploring distinct gear ratios and accessible manufactured assemblies, the design delivers a reliable, inventive, and truly affordable mechanical assistant.
+
+VC Stimulus:
+This assistive system can thoughtfully integrate rubber grips and lever handles to create an intuitive tabletop opener that effectively accesses stored items without causing damage to the fragile vessels. Designed to handle continuous palm presses, these metal brackets seamlessly blend gripping pads and swinging arms to optimize steady top extractions and ensure rapid item retrieval. To ensure practical manufacturing, structural frames like suction cups, plastic levers, and padded buttons can be configured to guarantee constant base gripping and remarkable turning strength. A highly adaptable contact surface allows users to translate single limb motions into effective top removal, actively maximizing solo operation while minimizing vessel breakages. Ultimately, by exploring distinct lever lengths and accessible molded plastics, the design delivers a reliable, inventive, and truly affordable household gadget.

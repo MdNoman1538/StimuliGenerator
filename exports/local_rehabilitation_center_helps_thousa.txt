@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T18:32:40
+Model: gemini-2.5-pro
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers.
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This stabilizing platform can thoughtfully integrate directed force and frictional resistance to create intuitive operation that effectively secure the vessel body without causing damage to the vessel body. Designed to handle continuous item throughput, these anchoring frameworks seamlessly blend applied torsion and surface adhesion to optimize single-handed conveyance and ensure rapid system reset. To ensure practical manufacturing, robust formations like compliant surfaces, force transducers, and static foundations can be configured to guarantee constant holding stability and remarkable material longevity. A highly adaptable control geometry allows users to translate human energy into counter-rotational effect, actively maximizing operational confidence while minimizing potential fracturing. Ultimately, by exploring distinct structural configurations and accessible material compositions, the design delivers a reliable, inventive, and truly affordable a closure-removal device.
+
+MC Stimulus:
+This stabilizing platform can thoughtfully integrate gripping action and clamping mechanisms to create intuitive functional interface that effectively secure the containment structure without causing damage to the containment structure. Designed to handle continuous component flow, these stabilizing assemblies seamlessly blend rotational drivers and base restraints to optimize single-handed manipulation and ensure rapid element exchange. To ensure practical manufacturing, structural modules like adjustable grippers, lever systems, and mounting hardware can be configured to guarantee constant engagement consistency and remarkable structural durability. A highly adaptable user interface allows users to translate manual input into counter-rotational movement, actively maximizing task certainty while minimizing structural failure. Ultimately, by exploring distinct assembly strategies and accessible component selections, the design delivers a reliable, inventive, and truly affordable a closure-removal device.
+
+VC Stimulus:
+This stabilizing platform can thoughtfully integrate hand pressure and rubber jaws to create intuitive simple layout that effectively secure the glass container without causing damage to the glass container. Designed to handle continuous container sequence, these countertop mounts seamlessly blend geared handles and non-slip pads to optimize single-handed control and ensure rapid lid removal. To ensure practical manufacturing, frame components like pivoting clamps, long-handled cranks, and suction-cup feet can be configured to guarantee constant gripping force and remarkable plastic-body resilience. A highly adaptable ergonomic handle allows users to translate hand motion into counter-rotational torque, actively maximizing user empowerment while minimizing container breakage. Ultimately, by exploring distinct housing shapes and accessible plastic materials, the design delivers a reliable, inventive, and truly affordable a closure-removal device.

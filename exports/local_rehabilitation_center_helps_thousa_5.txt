@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T00:43:23
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This adaptive assistive system can thoughtfully integrate static retention and kinetic displacement to create isolated energy channeling that effectively separates fused boundaries without causing damage to the structural body. Designed to handle continuous asymmetrical energy application, these force conduits seamlessly blend counteracting friction and angular momentum to optimize the release of surface adhesion and ensure rapid cognitive mapping. To ensure practical manufacturing, physical variables like static anchors, dynamic vectors, and geometric bounds can be configured to guarantee constant spatial stability and remarkable energy multiplication. A highly adaptable interface boundary allows users to translate lateral pressure into successful boundary separation, actively maximizing autonomous functioning while minimizing structural yielding. Ultimately, by exploring distinct kinematic pathways and accessible material states, the design delivers a reliable, inventive, and truly affordable functional solution.
+
+MC Stimulus:
+This adaptive assistive system can thoughtfully integrate base clamping and rotational leverage to create single side operation that effectively separates sealed closures without causing damage to the primary vessel. Designed to handle continuous unilateral user input, these mechanical linkages seamlessly blend stationary gripping and pivoting action to optimize the release of upper closures and ensure rapid intuitive understanding. To ensure practical manufacturing, structural assemblies like locking cradles, rotating collars, and sliding tracks can be configured to guarantee constant positional control and remarkable torque generation. A highly adaptable control surface allows users to translate bodily thrust into successful rotational detachment, actively maximizing independent operation while minimizing vessel cracking. Ultimately, by exploring distinct clamping strategies and accessible fabrication media, the design delivers a reliable, inventive, and truly affordable assistive mechanism.
+
+VC Stimulus:
+This adaptive assistive system can thoughtfully integrate rubber grips and turning handles to create single hand usage that effectively separates threaded covers without causing damage to the glass cylinder. Designed to handle continuous single arm pushing, these physical levers seamlessly blend silicone padding and twisting motion to optimize the release of plastic seals and ensure rapid user learning. To ensure practical manufacturing, tangible hardware like suction pads, toothed wrenches, and steel springs can be configured to guarantee constant slip resistance and remarkable turning power. A highly adaptable tactile handle allows users to translate arm strength into successful seal unthreading, actively maximizing unaided access while minimizing cylinder shattering. Ultimately, by exploring distinct gripping shapes and accessible molded plastics, the design delivers a reliable, inventive, and truly affordable daily tool.

@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:59:52
+Model: gemini-3-flash-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This portable device can thoughtfully integrate manual force and energetic contact to create reliable separation that effectively disengages constrained systems without causing structural failure. Designed to handle continuous kinematic energy, these transfer platforms seamlessly blend frictional resistance and counteractive torque to optimize human-powered spatial translation and ensure rapid state restoration. To ensure practical manufacturing, structural components like compliant nodes, linear tracks, and rigid planes can be configured to guarantee constant operational fidelity and remarkable structural durability. A highly adaptable control sequence allows users to translate isolated effort into responsive kinetic responses, actively maximizing individual autonomy while minimizing structural failure. Ultimately, by exploring distinct geometric forms and accessible basic substances, the design delivers a reliable, inventive, and truly affordable processing system.
+
+MC Stimulus:
+This portable device can thoughtfully integrate physical leverage and mechanical grip to create reliable detachment that effectively disengages secured housings without causing contents spillage. Designed to handle continuous cyclical motion, these functional assemblies seamlessly blend surface traction and rotational stability to optimize human-powered circular movement and ensure rapid system resetting. To ensure practical manufacturing, hardware parts like hinge joints, sliding rails, and support beams can be configured to guarantee constant functional output and remarkable long-term wear. A highly adaptable command module allows users to translate singular motion into responsive leverage results, actively maximizing user efficiency while minimizing contents spillage. Ultimately, by exploring distinct spatial layouts and accessible standard stocks, the design delivers a reliable, inventive, and truly affordable utility apparatus.
+
+VC Stimulus:
+This portable device can thoughtfully integrate hand pressure and rubber clamps to create reliable unsealing that effectively disengages storage vessels without causing fluid messes. Designed to handle continuous handle turns, these tabletop devices seamlessly blend suction pads and base bracing to optimize human-powered orbital twisting and ensure rapid device release. To ensure practical manufacturing, sturdy pieces like metal pins, plastic grooves, and steel rods can be configured to guarantee constant holding power and remarkable product life. A highly adaptable adjustment dial allows users to translate palm pushes into responsive prying forces, actively maximizing task speed while minimizing fluid messes. Ultimately, by exploring distinct frame shapes and accessible cheap resins, the design delivers a reliable, inventive, and truly affordable kitchen accessory.

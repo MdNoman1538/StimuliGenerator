@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:51:48
+Model: gemini-3.1-pro-preview
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This assisting apparatus can thoughtfully integrate momentum and resistance to create kinetic divergence that effectively accesses sealed volumes without causing unintended displacement. Designed to handle continuous energetic application, these physical interfaces seamlessly blend magnitude and stasis to optimize user-generated work and ensure rapid movement. To ensure practical manufacturing, geometric forms like rigid bodies, compliant zones, and structural nodes can be configured to guarantee constant spatial retention and remarkable equilibrium. A quickly mastered contact boundary allows users to translate localized applied pressures into controllable vector regulation for directional and braking needs, actively maximizing task completion while minimizing unintended displacement. Ultimately, by exploring distinct spatial layouts and accessible elemental substances, the design delivers a reliable, inventive, and truly affordable daily artifact.
+
+MC Stimulus:
+This assisting apparatus can thoughtfully integrate leverage and friction to create rotational disengagement that effectively accesses threaded vessels without causing uncontrolled sliding. Designed to handle continuous mechanical actuation, these structural components seamlessly blend torque and binding to optimize user-generated output and ensure rapid unlocking. To ensure practical manufacturing, kinematic linkages like clamping jaws, pivot joints, and sliding tracks can be configured to guarantee constant positional locking and remarkable reliability. A quickly mastered operating module allows users to translate single point actions into controllable rotary management for directional and braking needs, actively maximizing separation success while minimizing uncontrolled sliding. Ultimately, by exploring distinct functional architectures and accessible processed materials, the design delivers a reliable, inventive, and truly affordable assistive device.
+
+VC Stimulus:
+This assisting apparatus can thoughtfully integrate grip and traction to create twist opening that effectively accesses sealed cylinders without causing accidental dropping. Designed to handle continuous manual turning, these plastic handles seamlessly blend push and hold to optimize user-generated twist and ensure rapid opening. To ensure practical manufacturing, hardware pieces like rubber straps, steel springs, and silicone pads can be configured to guarantee constant base gripping and remarkable durability. A quickly mastered hand lever allows users to translate one hand pushes into controllable spin stopping for directional and braking needs, actively maximizing seal breaking while minimizing accidental dropping. Ultimately, by exploring distinct mounting shapes and accessible molded plastics, the design delivers a reliable, inventive, and truly affordable handheld tool.

@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:54:23
+Model: gemini-3-flash-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This handling system can thoughtfully integrate kinetic energy and surface friction to create productive forceful torque that effectively manages interfacial separation without causing damage to the internal matter. Designed to handle continuous external volumes, these engagement zones seamlessly blend spatial fixation and angular movement to optimize consistent separation rates and ensure rapid cycle resetting. To ensure practical manufacturing, structural elements like resilient interfaces, rigid supports, and pivotal points can be configured to guarantee constant static tension and remarkable operational simplicity. A highly adaptable navigational system allows users to translate muscular work into increased directional magnitude, actively maximizing systemic stability while minimizing internal matter. Ultimately, by exploring distinct spatial configurations and accessible material resources, the design delivers a reliable, inventive, and truly affordable functional device.
+
+MC Stimulus:
+This handling system can thoughtfully integrate manual effort and contact traction to create productive rotational leverage that effectively manages closure removal without causing damage to the stored contents. Designed to handle continuous processed vessels, these clamping units seamlessly blend structural bracing and axial turning to optimize consistent removal tasks and ensure rapid task finalization. To ensure practical manufacturing, mechanical parts like elastic bands, lever arms, and geared hinges can be configured to guarantee constant grip strength and remarkable functional ease. A highly adaptable braking assembly allows users to translate physical input into increased controlled force, actively maximizing vessel security while minimizing stored contents. Ultimately, by exploring distinct technical layouts and accessible fabrication stocks, the design delivers a reliable, inventive, and truly affordable mechanical aid.
+
+VC Stimulus:
+This handling system can thoughtfully integrate hand pressure and rubber texture to create productive wrench power that effectively manages lid unscrewing without causing damage to the food items. Designed to handle continuous sealed canisters, these adjustable straps seamlessly blend base suction and circular rotation to optimize consistent lid loosening and ensure rapid container access. To ensure practical manufacturing, physical items like silicone pads, plastic handles, and steel bolts can be configured to guarantee constant hold firmness and remarkable user comfort. A highly adaptable locking lever allows users to translate palm twisting into increased steady motion, actively maximizing bottle safety while minimizing food items. Ultimately, by exploring distinct product shapes and accessible hardware parts, the design delivers a reliable, inventive, and truly affordable kitchen tool.

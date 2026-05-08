@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T20:15:40
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers.
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This specialized assistance unit thoughtfully integrates unilateral energy and static resistance to provide effective separation devices that disengage domestic vessels without damaging structural integrity. Handling continuous geometric variations, these versatile processing units blend shear forces and torque application to optimize radial displacement and ensure content release. For practical manufacturing, rigid frameworks like friction zones, supporting bases, and integrated pivots maintain constant system alignment and force amplification. An adaptable direct interface translates biological effort into decoupling power, maximizing process speed while minimizing physical damage. Ultimately, by exploring distinct geometric configurations and foundational materials, the design delivers a reliable and truly affordable independent solution.
+
+MC Stimulus:
+This specialized assistance unit thoughtfully integrates manual activation and geometric locking to provide effective uncoupling systems that disengage storage canisters without damaging container walls. Handling continuous dimension shifts, these versatile opening assemblies blend frictional contact and leverage mechanisms to optimize rotational movement and ensure seal breakage. For practical manufacturing, modular components like flexible straps, mounting plates, and gear teeth maintain constant positional security and power efficiency. An adaptable lever control translates kinetic energy into opening torque, maximizing user speed while minimizing material failure. Ultimately, by exploring distinct mechanical arrangements and standard components, the design delivers a reliable and truly affordable support appliance.
+
+VC Stimulus:
+This specialized assistance unit thoughtfully integrates arm movement and base clamping to provide effective torque tools that disengage glass containers without damaging exterior walls. Handling continuous volume ranges, these versatile grip tools blend rubber pads and handle extensions to optimize twist motion and ensure closure removal. For practical manufacturing, plastic parts like silicone mats, suction cups, and steel bolts maintain constant clamping pressure and sturdy performance. An adaptable crank handle translates hand pressure into turning force, maximizing task speed while minimizing surface cracks. Ultimately, by exploring distinct structural designs and common hardware, the design delivers a reliable and truly affordable domestic aid.

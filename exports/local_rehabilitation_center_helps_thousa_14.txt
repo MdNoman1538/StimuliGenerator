@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:25:55
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This assist device thoughtfully integrates spatial stabilization and rotational displacement to yield an intuitive assistive framework that effectively accesses sealed vessels without causing damage to the structural integrity. Designed for continuous asymmetric forces, these reactive networks blend vertical resistance and lateral leverage to optimize unassisted barrier bypassing and ensure rapid cognitive adaptation. For practical manufacturing, localized elements like friction interfaces, force amplifiers, and dynamic equalizers are configured to guarantee constant contact continuity and remarkable operational predictability. An adaptable boundary condition allows users to translate kinetic energy into precise angular momentum, maximizing task completion while minimizing structural compromise. Ultimately, by exploring distinct energetic states and accessible material properties, the design delivers an inventive, truly affordable adaptive system.
+
+MC Stimulus:
+This assist device thoughtfully integrates frictional gripping and torsional shearing to yield an intuitive mechanical linkage that effectively accesses cylindrical canisters without causing damage to the internal contents. Designed for continuous unilateral inputs, these stabilizing bases blend downward anchoring and twisting moments to optimize unassisted closure detachment and ensure rapid procedural mastery. For practical manufacturing, functional modules like clamping brackets, lever extensions, and sizing ratchets are configured to guarantee constant slip prevention and remarkable mechanical advantage. An adaptable control surface allows users to translate physical exertion into precise rotational output, maximizing functional autonomy while minimizing content spillage. Ultimately, by exploring distinct kinematic layouts and accessible structural composites, the design delivers an inventive, truly affordable accessibility device.
+
+VC Stimulus:
+This assist device thoughtfully integrates rubberized clamping and threaded unscrewing to yield an intuitive tabletop appliance that effectively accesses glass containers without causing damage to the fragile glassware. Designed for continuous arm motions, these gripping stations blend base clamping and sideways turning to optimize unassisted cap removal and ensure rapid user onboarding. For practical manufacturing, tangible hardware like silicone matting, plastic handles, and adjustable springs are configured to guarantee constant grip steadiness and remarkable physical durability. An adaptable hand interface allows users to translate palm pressure into precise lid rotation, maximizing opening success while minimizing glass shattering. Ultimately, by exploring distinct molded shapes and accessible plastic polymers, the design delivers an inventive, truly affordable kitchen gadget.

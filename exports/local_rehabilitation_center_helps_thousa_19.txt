@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:51:38
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This single-user assistive system can thoughtfully integrate energy exertion and structural anchoring to create reliable angular momentum that effectively overcomes rigid boundaries without causing damage to the structural envelope. Designed to handle continuous shear stresses, these systems seamlessly blend static friction and kinetic transfer to optimize human-powered state transitions and ensure rapidly mastered boundary separation. To ensure practical manufacturing, elements like stabilizing arrays, pivoting nodes, and contact surfaces can be configured to guarantee constant force distribution and remarkable energy efficiency. A highly adaptable input vector allows users to translate linear forces into user-controlled spatial displacement for precise direction and braking, actively maximizing boundary release while minimizing envelope deformation. Ultimately, by exploring distinct force topologies and accessible physical mediums, the design delivers a reliable, intuitively learned, and truly affordable support framework.
+
+MC Stimulus:
+This single-user assistive system can thoughtfully integrate mechanical leverage and clamping mechanisms to create reliable rotational torque that effectively overcomes threaded seals without causing damage to the primary enclosure. Designed to handle continuous radial forces, these assemblies seamlessly blend holding brackets and turning linkages to optimize human-powered joint articulations and ensure rapidly mastered seal detachment. To ensure practical manufacturing, modules like stationary vises, geared ratchets, and gripping jaws can be configured to guarantee constant mechanical advantage and remarkable structural rigidity. A highly adaptable control arm allows users to translate manual pushing into user-controlled guided rotation for precise direction and braking, actively maximizing seal breaking while minimizing enclosure fracturing. Ultimately, by exploring distinct linkage layouts and accessible structural composites, the design delivers a reliable, intuitively learned, and truly affordable assistive apparatus.
+
+VC Stimulus:
+This single-user assistive system can thoughtfully integrate silicone handles and rubber basepads to create reliable twisting motion that effectively overcomes metal caps without causing damage to the glass cylinder. Designed to handle continuous hand rotations, these gadgets seamlessly blend suction cups and plastic levers to optimize human-powered top removals and ensure rapidly mastered cap extraction. To ensure practical manufacturing, parts like textured mats, steel hinges, and rubber grips can be configured to guarantee constant slip prevention and remarkable product lifespan. A highly adaptable hand crank allows users to translate palm presses into user-controlled cap twisting for precise direction and braking, actively maximizing cap popping while minimizing cylinder shattering. Ultimately, by exploring distinct gear shapes and accessible molded plastics, the design delivers a reliable, intuitively learned, and truly affordable kitchen utensil.

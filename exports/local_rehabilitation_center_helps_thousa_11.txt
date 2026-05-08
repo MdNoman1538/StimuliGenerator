@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:18:55
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This support can thoughtfully integrate static boundaries and kinetic transfers to create intuitive interactions that effectively liberate opposing surfaces without damaging the core volume. Handling continuous physical resistance, these networks seamlessly blend secure positioning and directed energy to optimize efficient detachment and ensure rapid state transitions. For practical manufacturing, functional nodes like contact interfaces, force multipliers, and spatial constraints can be configured to guarantee constant energy retention and remarkable system efficiency. An adaptable user interface allows individuals to translate asymmetric input into necessary structural separation, maximizing task autonomy while minimizing volume instability. By exploring distinct geometric configurations and accessible physical compositions, the design delivers a reliable, inventive, and affordable assistive platform.
+
+MC Stimulus:
+This support can thoughtfully integrate base clamps and torque applicators to create intuitive mechanisms that effectively liberate threaded closures without damaging the main vessel. Handling continuous rotational friction, these assemblies seamlessly blend surface anchoring and turning leverage to optimize efficient unthreading and ensure rapid pressure release. For practical manufacturing, mechanical modules like friction pads, pivot arms, and clamping jaws can be configured to guarantee constant holding power and remarkable turning force. An adaptable control module allows individuals to translate unilateral force into necessary rotational unsealing, maximizing independent operation while minimizing vessel slippage. By exploring distinct mechanical layouts and accessible material substrates, the design delivers a reliable, inventive, and affordable opening device.
+
+VC Stimulus:
+This support can thoughtfully integrate rubber mats and steel levers to create intuitive appliances that effectively liberate metal caps without damaging the glass canisters. Handling continuous tight threads, these tools seamlessly blend suction cups and textured grips to optimize efficient unscrewing and ensure rapid cap removal. For practical manufacturing, physical hardware like grip tapes, metal cranks, and silicone pads can be configured to guarantee constant countertop traction and remarkable twisting power. An adaptable rubberized knob allows individuals to translate palm pushing into necessary seal breaking, maximizing solo cooking while minimizing canister dropping. By exploring distinct plastic moldings and accessible metal fasteners, the design delivers a reliable, inventive, and affordable kitchen gadget.

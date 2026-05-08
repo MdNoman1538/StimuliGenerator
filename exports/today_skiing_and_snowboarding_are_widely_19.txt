@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T15:38:50
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Today, skiing and snowboarding are widely used as personal transportation tools on snow. But to use them, a lot of skill and experience are required, which a user normally cannot learn in one day. Moreover, skis and snowboards cannot run uphill because they are moved by gravity. You are a designer, and your task is to design alternative personal tools for snow transport.
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This processing system can thoughtfully integrate force application and frictional interface to create versatile transport phenomena that effectively traverse particulate matter without compromising the user equilibrium. Designed to handle continuous muscular exertion, these dynamic systems seamlessly blend propulsive energy and opposing forces to optimize through-the-medium vector velocity and ensure rapid kinetic dissipation. To ensure practical manufacturing, material elements like support members, guide vectors, and rotary pivots can be configured to guarantee constant system control and remarkable structural integrity. A highly adaptable control interface allows users to translate tactile cues into precise spatial adjustments, actively maximizing cognitive accessibility while minimizing equilibrium loss. Ultimately, by exploring distinct assembly concepts and accessible primary substances, the design delivers a reliable, inventive, and truly affordable functional prototype.
+
+MC Stimulus:
+This transit unit can thoughtfully integrate mechanical drive and traction system to create agile mobility units that effectively navigate unstable ground without compromising the operator balance. Designed to handle continuous leg rotation, these structural frames seamlessly blend torque transfer and braking friction to optimize through-the-medium forward motion and ensure rapid stopping sequences. To ensure practical manufacturing, standard modules like tubular trusses, steering linkages, and bearing clusters can be configured to guarantee constant path tracking and remarkable component lifespan. A highly adaptable steering assembly allows users to translate manual inputs into precise directional changes, actively maximizing instructional clarity while minimizing balance loss. Ultimately, by exploring distinct fabrication styles and accessible utility materials, the design delivers a reliable, inventive, and truly affordable commuting device.
+
+VC Stimulus:
+This terrain vehicle can thoughtfully integrate chain drive and tread system to create robust pedal vehicles that effectively cross granulated terrain without compromising the rider stability. Designed to handle continuous foot pumping, these metal chassis seamlessly blend gear power and pad clamping to optimize through-the-medium ground speed and ensure rapid braking performance. To ensure practical manufacturing, stock components like alloy frames, handlebar stems, and axle bolts can be configured to guarantee constant front steering and remarkable frame durability. A highly adaptable handlebar grip allows users to translate hand movements into precise steering angles, actively maximizing learning ease while minimizing stability loss. Ultimately, by exploring distinct welding patterns and accessible plastic resins, the design delivers a reliable, inventive, and truly affordable utility vehicle.

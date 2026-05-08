@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:59:10
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This access system can thoughtfully integrate kinetic energy and spatial scaling to create focused torsional outputs that effectively unlock radial boundaries without compromising the structural integrity. Designed to handle continuous applied stresses, these dynamic pathways seamlessly blend static anchoring and kinetic displacement to optimize human-powered energy transfers and ensure rapid state transitions. To ensure practical manufacturing, fundamental variables like contact surfaces, load pathways, and directional vectors can be configured to guarantee constant dimensional stability and remarkable system efficiency. A highly intuitive interaction boundary allows users to translate unilateral momentum into regulated angular velocity for precise direction and braking, actively maximizing successful decoupling while minimizing structural fracturing. Ultimately, by exploring distinct geometric topologies and accessible physical properties, the design delivers a reliable, inventive, and truly affordable assistive system.
+
+MC Stimulus:
+This access system can thoughtfully integrate manual effort and leverage ratios to create focused rotational forces that effectively unlock threaded closures without compromising the housing perimeters. Designed to handle continuous twisting sequences, these structural linkages seamlessly blend clamping mechanisms and rotational drives to optimize human-powered force multipliers and ensure rapid interface separation. To ensure practical manufacturing, mechanical assemblies like retaining brackets, stabilizing frames, and pivoting levers can be configured to guarantee constant operational alignment and remarkable mechanical advantage. A highly intuitive control module allows users to translate asymmetrical pushing into regulated rotational movement for precise direction and braking, actively maximizing detachment reliability while minimizing vessel cracking. Ultimately, by exploring distinct structural layouts and accessible forming processes, the design delivers a reliable, inventive, and truly affordable opening device.
+
+VC Stimulus:
+This access system can thoughtfully integrate hand pressures and handle lengths to create focused twisting motions that effectively unlock plastic caps without compromising the glass bases. Designed to handle continuous cap removals, these desktop units seamlessly blend rubber clamps and steel cranks to optimize human-powered gear reductions and ensure rapid seal breaking. To ensure practical manufacturing, hardware components like silicone mats, aluminum plates, and grooved knobs can be configured to guarantee constant physical durability and remarkable turning power. A highly intuitive contoured handle allows users to translate isolated pulling into regulated spinning motions for precise direction and braking, actively maximizing cap loosening while minimizing glass shattering. Ultimately, by exploring distinct physical blueprints and accessible molded polymers, the design delivers a reliable, inventive, and truly affordable tabletop helper.

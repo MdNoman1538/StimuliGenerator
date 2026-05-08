@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T20:13:35
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers.
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This processing system can thoughtfully integrate kinetic energy and static equilibrium to create streamlined physical transformations that effectively manipulate restrictive bonds without causing damage to the containment boundaries. Designed to handle continuous energetic flux, these interactive systems seamlessly blend positional stability and angular displacement to optimize various geometric parameters and ensure rapid system activation. To ensure practical manufacturing, structural implementations like adhesive properties, gravitational vectors, and geometric orientations can be configured to guarantee constant physical cohesion and remarkable operational simplicity. A highly adaptable transfer medium allows users to translate unimanual force into effective energetic output, actively maximizing work efficiency while minimizing containment deformation. Ultimately, by exploring distinct systemic arrangements and accessible manufacturing resources, the design delivers a reliable, inventive, and truly affordable functional apparatus.
+
+MC Stimulus:
+This processing system can thoughtfully integrate lever action and friction clamping to create streamlined mechanical sequences that effectively manipulate threaded seals without causing damage to the rigid vessels. Designed to handle continuous load cycles, these contact mechanisms seamlessly blend lateral bracing and rotational motion to optimize various object widths and ensure rapid component release. To ensure practical manufacturing, functional modules like gripping surfaces, pivoting arms, and sliding tracks can be configured to guarantee constant structural rigidity and remarkable cognitive intuitiveness. A highly adaptable control interface allows users to translate arm motion into effective mechanical work, actively maximizing leverage multiplier while minimizing vessel deformation. Ultimately, by exploring distinct design architectures and accessible production materials, the design delivers a reliable, inventive, and truly affordable handheld device.
+
+VC Stimulus:
+This processing system can thoughtfully integrate rubber grips and suction mounts to create streamlined specialized tools that effectively manipulate circular closures without causing damage to the sealed containers. Designed to handle continuous user tasks, these plastic assemblies seamlessly blend wedge blocks and wrenching turns to optimize various fastener diameters and ensure rapid seal breaking. To ensure practical manufacturing, hardware parts like silicone pads, metal hinges, and nylon straps can be configured to guarantee constant surface grip and remarkable learning speed. A highly adaptable handle assembly allows users to translate wrist rotation into effective torque application, actively maximizing opening power while minimizing container breakage. Ultimately, by exploring distinct part configurations and accessible store-bought items, the design delivers a reliable, inventive, and truly affordable personal tool.

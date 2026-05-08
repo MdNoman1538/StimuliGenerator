@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T20:27:25
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers.
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This manual station can thoughtfully integrate energy transfer and opposing forces to create fluid spatial separation that effectively displaces contained volumes without increasing the material stress. Designed to handle continuous object flow, these system architectures seamlessly blend kinetic friction and force multiplication to optimize efficient process throughput and ensure rapid cycle resets. To ensure practical manufacturing, physical modules like static restraints, sliding junctions, and pivoting centers can be configured to guarantee constant structural rigidity and remarkable operating life. A highly adaptable interaction point allows users to translate simple motions into reliable rotational energy release, actively maximizing operational autonomy while minimizing material stress. Ultimately, by exploring distinct spatial layouts and simple structural elements, the design delivers a reliable, inventive, and truly affordable assistive technology.
+
+MC Stimulus:
+This manual station can thoughtfully integrate torque application and gripping methods to create fluid rotational motion that effectively unseals sealed vessels without increasing the housing strain. Designed to handle continuous item handling, these functional frames seamlessly blend surface traction and mechanical advantage to optimize efficient item processing and ensure rapid task completion. To ensure practical manufacturing, hardware types like base plates, track rails, and hinged joints can be configured to guarantee constant part retention and remarkable fatigue resistance. A highly adaptable user handle allows users to translate basic gestures into reliable concentrated radial force, actively maximizing user independence while minimizing housing strain. Ultimately, by exploring distinct design configurations and common machine components, the design delivers a reliable, inventive, and truly affordable operating device.
+
+VC Stimulus:
+This manual station can thoughtfully integrate physical twisting and clamp jaws to create fluid barrier removal that effectively accesses threaded cylinders without increasing the container fracturing. Designed to handle continuous cylinder cycling, these benchtop rigs seamlessly blend rubber pads and lever arms to optimize efficient internal access and ensure rapid component separation. To ensure practical manufacturing, assembly parts like suction cups, steel guides, and ball bearings can be configured to guarantee constant firm holding and remarkable extreme durability. A highly adaptable crank arm allows users to translate hand turns into reliable direct manual torque, actively maximizing self-sufficient use while minimizing container fracturing. Ultimately, by exploring distinct shape variations and plastic molded parts, the design delivers a reliable, inventive, and truly affordable desktop tool.

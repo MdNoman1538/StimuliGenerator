@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T18:42:32
+Model: gemini-2.5-pro
+Condition: text + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers.
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This gripping system can thoughtfully integrate manual exertion and reactive stability to create unassisted unassisted access that effectively separates enclosed volume without causing damage to the contained object. Designed to handle continuous geometric variation, these support apparatuses seamlessly blend compressive force and torsional force to optimize component separation and ensure rapid rapid readiness. To ensure practical manufacturing, stabilizing structures like compliance, adhesion, and leverage can be configured to guarantee constant constant stabilization and remarkable structural integrity. A highly adaptable an intuitive interface allows users to translate minimal effort into predictable controlled displacement, actively maximizing operational confidence while minimizing damage to the contained object. Ultimately, by exploring distinct physical configurations and accessible common properties, the design delivers a reliable, inventive, and truly affordable a support apparatus.
+
+MC Stimulus:
+This gripping system can thoughtfully integrate linear input and a base-fixture to create unassisted independent operation that effectively separates lower vessel without causing damage to the primary component. Designed to handle continuous variable dimensions, these clamping mechanisms seamlessly blend a gripping feature and a rotational driver to optimize lid disengagement and ensure rapid quick setup. To ensure practical manufacturing, anchoring frameworks like jaws, straps, and handles can be configured to guarantee constant secure containment and remarkable mechanical durability. A highly adaptable an engagement control allows users to translate user actuation into predictable precise movement, actively maximizing user autonomy while minimizing damage to the primary component. Ultimately, by exploring distinct mechanical arrangements and accessible standard components, the design delivers a reliable, inventive, and truly affordable a gripping system.
+
+VC Stimulus:
+This gripping system can thoughtfully integrate a hand-push and a base-grip to create unassisted single-handed use that effectively separates food jar without causing damage to the glass container. Designed to handle continuous different container-sizes, these gripping devices seamlessly blend a friction pad and a geared handle to optimize cap removal and ensure rapid fast placement. To ensure practical manufacturing, rigid bodies like V-grips, teeth, and levers can be configured to guarantee constant a firm hold and remarkable high-strength materials. A highly adaptable an adjustable knob allows users to translate a simple motion into predictable predictable rotation, actively maximizing independent living while minimizing damage to the glass container. Ultimately, by exploring distinct material choices and accessible off-the-shelf parts, the design delivers a reliable, inventive, and truly affordable a kitchen tool.

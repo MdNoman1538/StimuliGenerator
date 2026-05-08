@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Stimulus Generator</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; height: 100%; overflow: hidden; }
+
+  :root {
+    --bg: #0d0f14;
+    --surface: #161920;
+    --surface2: #1e2230;
+    --border: #272c3d;
+    --border-focus: #5b6af0;
+    --text: #dde3f0;
+    --text-muted: #6b748a;
+    --text-dim: #9aa0b4;
+    --accent: #5b6af0;
+    --accent-hover: #4a58e0;
+    --danger: #e05b5b;
+    --danger-hover: #c94848;
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --badge-gemini: #1a3a5c;
+    --badge-gemini-text: #7dd3fc;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100dvh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1.1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1rem; font-weight: 600; color: var(--text); }
+  header .subtitle { font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }
+  .logo { width: 28px; height: 28px; background: var(--accent); border-radius: 7px; display: grid; place-items: center; flex-shrink: 0; }
+  .logo svg { width: 16px; height: 16px; fill: white; }
+
+  .model-badge {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    background: var(--badge-gemini);
+    color: var(--badge-gemini-text);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  /* LEFT PANEL */
+  .left-panel {
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .panel-header {
+    padding: 1.1rem 1.4rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-height: 0;
+    overscroll-behavior: contain;
+  }
+
+  .field { display: flex; flex-direction: column; gap: 0.45rem; }
+  label { font-size: 0.78rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+  label .req-star { color: var(--danger); margin-left: 2px; }
+
+  textarea, input[type="text"] {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+    width: 100%;
+  }
+  textarea:focus, input[type="text"]:focus { border-color: var(--border-focus); }
+  textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
+  textarea.invalid, input.invalid { border-color: var(--danger) !important; }
+
+  .error-msg { font-size: 0.75rem; color: var(--danger); display: none; }
+  .error-msg.show { display: block; }
+
+  .req-list { display: flex; flex-direction: column; gap: 0.5rem; }
+  .req-item { display: flex; align-items: center; gap: 0.5rem; }
+  .req-item input { flex: 1; }
+  .btn-remove {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: none;
+    background: var(--danger); color: white; cursor: pointer; display: grid;
+    place-items: center; transition: background 0.15s; line-height: 1;
+  }
+  .btn-remove:hover { background: var(--danger-hover); }
+  .btn-remove svg { width: 10px; height: 10px; fill: white; }
+  .btn-remove.hidden { visibility: hidden; pointer-events: none; }
+
+  .btn-add {
+    align-self: flex-start; display: flex; align-items: center; gap: 0.4rem;
+    font-size: 0.82rem; font-weight: 500; color: var(--accent);
+    background: transparent; border: 1px dashed var(--accent);
+    border-radius: var(--radius-sm); padding: 0.35rem 0.8rem;
+    cursor: pointer; transition: background 0.15s; margin-top: 0.15rem;
+  }
+  .btn-add:hover { background: rgba(91,106,240,0.1); }
+  .btn-add svg { width: 12px; height: 12px; fill: var(--accent); }
+
+  .toggle-row { display: flex; gap: 0.4rem; }
+  .toggle-row.invalid-group .toggle-btn:not(.active) { border-color: var(--danger); }
+  .toggle-btn {
+    flex: 1; padding: 0.55rem 0.5rem; border: 1px solid var(--border);
+    border-radius: var(--radius-sm); background: transparent;
+    color: var(--text-muted); font-size: 0.82rem; font-weight: 500;
+    cursor: pointer; transition: all 0.15s; text-align: center;
+    position: relative;
+  }
+  .toggle-btn:hover:not(.active) { border-color: #3d4260; color: var(--text-dim); }
+  .toggle-btn.active {
+    border-color: var(--accent); background: rgba(91,106,240,0.15); color: #a5b4fc;
+  }
+  .toggle-btn::after {
+    content: attr(data-tip);
+    position: absolute; bottom: calc(100% + 6px); left: 50%;
+    transform: translateX(-50%);
+    background: #1e2230; color: var(--text-dim);
+    font-size: 0.7rem; font-weight: 400; white-space: nowrap;
+    padding: 0.3rem 0.6rem; border-radius: 4px;
+    border: 1px solid var(--border);
+    pointer-events: none; opacity: 0;
+    transition: opacity 0.15s; z-index: 10;
+  }
+  .toggle-btn:hover::after { opacity: 1; }
+
+  .panel-footer {
+    padding: 1rem 1.4rem;
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .btn-generate {
+    width: 100%; padding: 0.75rem; background: var(--accent); color: white;
+    border: none; border-radius: var(--radius-sm); font-size: 0.9rem;
+    font-weight: 600; cursor: pointer; transition: background 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  }
+  .btn-generate:hover:not(:disabled) { background: var(--accent-hover); }
+  .btn-generate:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* RIGHT PANEL */
+  .right-panel {
+    display: flex; flex-direction: column; overflow: hidden;
+    background: var(--bg); min-height: 0;
+  }
+  .right-panel .panel-header {
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .output-body {
+    flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem;
+    display: flex; flex-direction: column; gap: 1.5rem;
+    min-height: 0; overscroll-behavior: contain;
+  }
+
+  .empty-state {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 0.8rem; color: var(--text-muted);
+    text-align: center; padding: 2rem;
+  }
+  .empty-state svg { width: 44px; height: 44px; opacity: 0.3; }
+  .empty-state p { font-size: 0.88rem; line-height: 1.5; max-width: 280px; }
+
+  /* Stimulus output cards (text mode) */
+  .stimulus-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .stimulus-group-header {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.75rem; color: var(--text-muted);
+  }
+  .badge {
+    display: inline-block; padding: 0.18rem 0.55rem; border-radius: 999px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em;
+    background: var(--badge-gemini); color: var(--badge-gemini-text);
+  }
+
+  .stimulus-section { border-bottom: 1px solid var(--border); }
+  .stimulus-section:last-child { border-bottom: none; }
+  .stimulus-label {
+    padding: 0.5rem 1rem 0.25rem;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted);
+  }
+  .stimulus-label.nc { color: #a78bfa; }
+  .stimulus-label.vc { color: #fb923c; }
+  .stimulus-text {
+    padding: 0.25rem 1rem 0.8rem;
+    font-size: 0.88rem; line-height: 1.8; color: var(--text);
+  }
+  .stimulus-actions {
+    padding: 0.5rem 1rem 0.6rem;
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    border-top: 1px solid var(--border);
+  }
+  .action-btn {
+    padding: 0.3rem 0.7rem; font-size: 0.75rem; font-weight: 500;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: transparent; color: var(--text-dim); cursor: pointer;
+    transition: all 0.15s; text-decoration: none; display: inline-block;
+  }
+  .action-btn:hover { border-color: var(--accent); color: #a5b4fc; }
+
+  .error-card {
+    background: #2a1515; border: 1px solid #5a2020; border-radius: var(--radius);
+    padding: 1rem 1.2rem; font-size: 0.88rem; color: #fca5a5; line-height: 1.55;
+    flex-shrink: 0;
+  }
+
+  .spinner {
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.25);
+    border-top-color: white; border-radius: 50%;
+    animation: spin 0.55s linear infinite; flex-shrink: 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── IMAGE FILMSTRIP ─────────────────────────────────────────── */
+  .filmstrip-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .filmstrip-header {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.75rem; color: var(--text-muted);
+  }
+  .filmstrip-stimulus-toggle {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .filmstrip-stimulus-toggle summary {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer;
+    user-select: none;
+  }
+  .filmstrip-stimulus-toggle summary:hover { color: var(--text-dim); }
+  .filmstrip-stimulus-text {
+    margin-top: 0.5rem; font-size: 0.84rem; line-height: 1.7; color: var(--text-dim);
+  }
+
+  .filmstrip-strip {
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filmstrip-strip::-webkit-scrollbar { height: 5px; }
+  .filmstrip-strip::-webkit-scrollbar-track { background: var(--surface2); }
+  .filmstrip-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+  .filmstrip-frame {
+    flex: 0 0 280px;
+    min-width: 280px;
+    scroll-snap-align: start;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+  .filmstrip-frame:last-child { border-right: none; }
+
+  .filmstrip-frame-header {
+    padding: 0.45rem 0.7rem;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-muted);
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+  .filmstrip-pos-badge {
+    background: var(--accent); color: #fff;
+    padding: 0.12rem 0.45rem; border-radius: 999px;
+    font-size: 0.65rem; font-weight: 700;
+  }
+
+  .filmstrip-frame img {
+    width: 280px; height: 280px; display: block;
+    object-fit: cover; background: #fff;
+  }
+
+  .filmstrip-frame-sentence {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.76rem; line-height: 1.55; color: var(--text-dim);
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    min-height: 60px;
+  }
+
+  .filmstrip-actions {
+    padding: 0.6rem 1rem;
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    border-top: 1px solid var(--border);
+    align-items: center;
+  }
+  .btn-zip {
+    padding: 0.45rem 1rem; font-size: 0.8rem; font-weight: 600;
+    border: none; border-radius: var(--radius-sm);
+    background: var(--accent); color: white; cursor: pointer;
+    transition: background 0.15s;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .btn-zip:hover { background: var(--accent-hover); }
+  .btn-zip svg { width: 14px; height: 14px; fill: white; }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3a4060; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 16 16"><path d="M8 1L2 5v6l6 4 6-4V5L8 1zm0 2.2L12 6v4l-4 2.7L4 10V6l4-2.8z"/></svg>
+  </div>
+  <div>
+    <h1>Design Stimulus Generator</h1>
+    <div class="subtitle">Semantic stimuli for design creativity research</div>
+  </div>
+  <div class="model-badge" id="model-badge">loading...</div>
+</header>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="panel-header">Inputs</div>
+    <div class="panel-body">
+
+      <div class="field">
+        <label>Task Description <span class="req-star">*</span></label>
+        <textarea id="task-input" placeholder="e.g. Design a device to shell peanuts." rows="4"></textarea>
+        <div class="error-msg" id="task-error">Task description is required.</div>
+      </div>
+
+      <div class="field">
+        <label>Requirements <span class="req-star">*</span></label>
+        <div class="req-list" id="req-list"></div>
+        <button class="btn-add" onclick="addReq()">
+          <svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+          Add Another
+        </button>
+        <div class="error-msg" id="req-error">At least one requirement must be filled in.</div>
+      </div>
+
+    </div>
+    <div class="panel-footer">
+      <div class="toggle-row" id="format-row">
+        <button class="toggle-btn active" data-group="format" data-value="text" data-tip="Generate text-based semantic stimuli" onclick="selectToggle(this)">Text</button>
+        <button class="toggle-btn" data-group="format" data-value="image" data-tip="Generate text stimuli + 5 images (Google Imagen 3)" onclick="selectToggle(this)">Image</button>
+      </div>
+      <div class="toggle-row" id="level-row">
+        <button class="toggle-btn" data-group="level" data-value="vc" data-tip="Tangible, real-world parts and materials" onclick="selectToggle(this)">Very Concrete</button>
+        <button class="toggle-btn" data-group="level" data-value="nc" data-tip="Abstract physics principles and energy concepts" onclick="selectToggle(this)">Not Concrete</button>
+      </div>
+      <div class="error-msg" id="toggle-error">Select a format and concreteness level.</div>
+      <button class="btn-generate" id="gen-btn" onclick="generate()">Generate Stimuli</button>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <div class="panel-header"><span>Output</span></div>
+    <div class="output-body" id="output-body">
+      <div class="empty-state" id="empty-state">
+        <svg viewBox="0 0 44 44" fill="none"><rect x="6" y="10" width="32" height="26" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M13 17h18M13 22h18M13 27h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <p>Fill in the task and requirements, then click <strong>Generate Stimuli</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let reqCount = 0;
+let selectedFormat = "text";
+let selectedLevel = null;
+
+addReq();
+loadModel();
+
+function selectToggle(btn) {
+  if (btn.classList.contains("disabled")) return;
+  const group = btn.dataset.group;
+  const row = btn.closest(".toggle-row");
+  row.querySelectorAll(`.toggle-btn[data-group="${group}"]`).forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  row.classList.remove("invalid-group");
+  if (group === "format") selectedFormat = btn.dataset.value;
+  if (group === "level") selectedLevel = btn.dataset.value;
+  if (selectedFormat && selectedLevel) {
+    document.getElementById("toggle-error").classList.remove("show");
+    document.getElementById("format-row").classList.remove("invalid-group");
+    document.getElementById("level-row").classList.remove("invalid-group");
+  }
+}
+
+async function loadModel() {
+  try {
+    const r = await fetch("/model");
+    const data = await r.json();
+    document.getElementById("model-badge").textContent = data.model;
+  } catch {
+    document.getElementById("model-badge").textContent = "offline";
+  }
+}
+
+function addReq() {
+  reqCount++;
+  const id = `req-${reqCount}`;
+  const list = document.getElementById("req-list");
+  const item = document.createElement("div");
+  item.className = "req-item";
+  item.id = `item-${id}`;
+  item.innerHTML = `
+    <input type="text" id="${id}" placeholder="e.g. Low cost" />
+    <button class="btn-remove" onclick="removeReq('item-${id}')" title="Remove">
+      <svg viewBox="0 0 10 10"><path d="M1 5h8" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+    </button>`;
+  list.appendChild(item);
+  updateRemoveButtons();
+  item.querySelector("input").focus();
+}
+
+function removeReq(itemId) {
+  document.getElementById(itemId)?.remove();
+  updateRemoveButtons();
+}
+
+function updateRemoveButtons() {
+  const items = document.querySelectorAll(".req-item");
+  items.forEach(item => {
+    item.querySelector(".btn-remove").classList.toggle("hidden", items.length === 1);
+  });
+}
+
+function validate() {
+  let ok = true;
+  const taskEl = document.getElementById("task-input");
+  const taskErr = document.getElementById("task-error");
+  const reqErr = document.getElementById("req-error");
+
+  if (!taskEl.value.trim()) {
+    taskEl.classList.add("invalid"); taskErr.classList.add("show"); ok = false;
+  } else {
+    taskEl.classList.remove("invalid"); taskErr.classList.remove("show");
+  }
+
+  const reqInputs = document.querySelectorAll(".req-item input");
+  const anyFilled = [...reqInputs].some(i => i.value.trim());
+  if (!anyFilled) {
+    reqInputs.forEach(i => i.classList.add("invalid")); reqErr.classList.add("show"); ok = false;
+  } else {
+    reqInputs.forEach(i => i.classList.remove("invalid")); reqErr.classList.remove("show");
+  }
+
+  const toggleErr = document.getElementById("toggle-error");
+  if (!selectedFormat) { document.getElementById("format-row").classList.add("invalid-group"); ok = false; }
+  if (!selectedLevel) { document.getElementById("level-row").classList.add("invalid-group"); ok = false; }
+  if (!selectedFormat || !selectedLevel) { toggleErr.classList.add("show"); }
+  else {
+    toggleErr.classList.remove("show");
+    document.getElementById("format-row").classList.remove("invalid-group");
+    document.getElementById("level-row").classList.remove("invalid-group");
+  }
+  return ok;
+}
+
+async function generate() {
+  if (!validate()) return;
+
+  const task = document.getElementById("task-input").value.trim();
+  const requirements = [...document.querySelectorAll(".req-item input")]
+    .map(i => i.value.trim()).filter(Boolean);
+
+  const isImage = selectedFormat === "image";
+  const endpoint = isImage ? "/generate-images" : "/generate";
+  const timeoutMs = isImage ? 600000 : 180000;
+
+  const btn = document.getElementById("gen-btn");
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div>' + (isImage ? 'Generating stimuli & images...' : 'Generating...');
+
+  const outputBody = document.getElementById("output-body");
+  document.getElementById("empty-state")?.remove();
+
+  const loading = document.createElement("div");
+  loading.id = "loading-card";
+  loading.className = "stimulus-group";
+  const loadMsg = isImage
+    ? 'Generating stimuli via Gemini, then creating 5 images via Imagen 3… this may take a minute.'
+    : 'Generating with Gemini...';
+  loading.innerHTML = `<div class="stimulus-group-header"><div class="spinner"></div> ${loadMsg}</div>`;
+  outputBody.prepend(loading);
+
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ task, requirements, format: selectedFormat, level: selectedLevel }),
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    const data = await res.json();
+    loading.remove();
+
+    if (data.error) {
+      const card = document.createElement("div");
+      card.className = "error-card";
+      card.textContent = data.error;
+      outputBody.prepend(card);
+    } else if (isImage) {
+      outputBody.prepend(buildFilmstripCard(data));
+    } else {
+      outputBody.prepend(buildOutputCard(data));
+    }
+  } catch (e) {
+    loading.remove();
+    const card = document.createElement("div");
+    card.className = "error-card";
+    card.textContent = e.name === "AbortError" ? `Request timed out (${timeoutMs/60000} min).` : e.message;
+    outputBody.prepend(card);
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = "Generate Stimuli";
+}
+
+function buildOutputCard(data) {
+  const card = document.createElement("div");
+  card.className = "stimulus-group";
+
+  const conditionTag = `${data.format} + ${data.level.toUpperCase()}`;
+  const header = document.createElement("div");
+  header.className = "stimulus-group-header";
+  header.innerHTML = `
+    <span class="badge">${data.model}</span>
+    <span class="badge" style="background:#1a3c2e;color:#6ee7b7">${conditionTag}</span>
+    <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${data.task}</span>
+  `;
+  card.appendChild(header);
+
+  const section = document.createElement("div");
+  section.className = "stimulus-section";
+  const lbl = document.createElement("div");
+  lbl.className = `stimulus-label ${data.level}`;
+  lbl.textContent = data.level_label;
+  section.appendChild(lbl);
+  const text = document.createElement("div");
+  text.className = "stimulus-text";
+  text.textContent = data.stimulus || "(not extracted)";
+  section.appendChild(text);
+  card.appendChild(section);
+
+  const actions = document.createElement("div");
+  actions.className = "stimulus-actions";
+  const stimulusContent = data.stimulus || "";
+
+  const copyBtn = document.createElement("button");
+  copyBtn.className = "action-btn";
+  copyBtn.textContent = "Copy";
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(stimulusContent).then(() => {
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy", 1500);
+    });
+  };
+
+  const dlBtn = document.createElement("button");
+  dlBtn.className = "action-btn";
+  dlBtn.textContent = "Download stimulus";
+  dlBtn.onclick = () => {
+    const blob = new Blob([stimulusContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = `stimulus_${data.level}_${Date.now()}.txt`; a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  actions.appendChild(copyBtn);
+  actions.appendChild(dlBtn);
+  if (data.report_url) {
+    const fullBtn = document.createElement("a");
+    fullBtn.className = "action-btn";
+    fullBtn.href = data.report_url;
+    fullBtn.download = data.report_file || "report.txt";
+    fullBtn.textContent = "Download full report";
+    actions.appendChild(fullBtn);
+  }
+  card.appendChild(actions);
+  return card;
+}
+
+function buildFilmstripCard(data) {
+  const card = document.createElement("div");
+  card.className = "filmstrip-card";
+
+  const fbs = ["Function", "Behavior", "Structure", "Human-Centered", "PDS"];
+  const conditionTag = `image + ${data.level.toUpperCase()}`;
+
+  // Header
+  const header = document.createElement("div");
+  header.className = "filmstrip-header";
+  header.innerHTML = `
+    <span class="badge">${data.model}</span>
+    <span class="badge" style="background:#1a3c2e;color:#6ee7b7">${conditionTag}</span>
+    <span class="badge" style="background:#3c1a3c;color:#e7b76e">Imagen 3</span>
+    <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${data.task}</span>
+  `;
+  card.appendChild(header);
+
+  // Collapsible stimulus text
+  const toggle = document.createElement("div");
+  toggle.className = "filmstrip-stimulus-toggle";
+  const details = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = `${data.level_label} — click to expand stimulus text`;
+  details.appendChild(summary);
+  const stimText = document.createElement("div");
+  stimText.className = "filmstrip-stimulus-text";
+  stimText.textContent = data.stimulus || "";
+  details.appendChild(stimText);
+  toggle.appendChild(details);
+  card.appendChild(toggle);
+
+  // Filmstrip
+  const strip = document.createElement("div");
+  strip.className = "filmstrip-strip";
+
+  (data.images || []).forEach((img, i) => {
+    const frame = document.createElement("div");
+    frame.className = "filmstrip-frame";
+
+    const fHeader = document.createElement("div");
+    fHeader.className = "filmstrip-frame-header";
+    fHeader.innerHTML = `<span class="filmstrip-pos-badge">${img.position}</span><span>${fbs[i] || ""}</span>`;
+    frame.appendChild(fHeader);
+
+    const imgEl = document.createElement("img");
+    imgEl.src = img.image_url;
+    imgEl.alt = `${img.position} — ${fbs[i] || ""}`;
+    imgEl.loading = "lazy";
+    frame.appendChild(imgEl);
+
+    const sentDiv = document.createElement("div");
+    sentDiv.className = "filmstrip-frame-sentence";
+    sentDiv.textContent = img.sentence;
+    frame.appendChild(sentDiv);
+
+    strip.appendChild(frame);
+  });
+
+  card.appendChild(strip);
+
+  // Actions
+  const actions = document.createElement("div");
+  actions.className = "filmstrip-actions";
+
+  const zipBtn = document.createElement("button");
+  zipBtn.className = "btn-zip";
+  zipBtn.innerHTML = `<svg viewBox="0 0 16 16"><path d="M8 1v10M4 7l4 4 4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M2 12v2h12v-2" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg> Download ZIP`;
+  zipBtn.onclick = async () => {
+    zipBtn.disabled = true;
+    zipBtn.textContent = "Preparing...";
+    try {
+      const res = await fetch("/download-zip", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          images: data.images,
+          stimulus: data.stimulus,
+          task: data.task,
+          level: data.level,
+        }),
+      });
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `stimuli_${data.level}_${Date.now()}.zip`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      alert("Download failed: " + e.message);
+    }
+    zipBtn.disabled = false;
+    zipBtn.innerHTML = `<svg viewBox="0 0 16 16"><path d="M8 1v10M4 7l4 4 4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M2 12v2h12v-2" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg> Download ZIP`;
+  };
+  actions.appendChild(zipBtn);
+
+  const copyBtn = document.createElement("button");
+  copyBtn.className = "action-btn";
+  copyBtn.textContent = "Copy stimulus text";
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(data.stimulus || "").then(() => {
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy stimulus text", 1500);
+    });
+  };
+  actions.appendChild(copyBtn);
+
+  if (data.report_url) {
+    const fullBtn = document.createElement("a");
+    fullBtn.className = "action-btn";
+    fullBtn.href = data.report_url;
+    fullBtn.download = data.report_file || "report.txt";
+    fullBtn.textContent = "Full report";
+    actions.appendChild(fullBtn);
+  }
+  card.appendChild(actions);
+
+  return card;
+}
+
+// Clear validation on input
+document.getElementById("task-input").addEventListener("input", function() {
+  this.classList.remove("invalid");
+  document.getElementById("task-error").classList.remove("show");
+});
+document.getElementById("req-list").addEventListener("input", function() {
+  document.querySelectorAll(".req-item input").forEach(i => i.classList.remove("invalid"));
+  document.getElementById("req-error").classList.remove("show");
+});
+</script>
+</body>
+</html>

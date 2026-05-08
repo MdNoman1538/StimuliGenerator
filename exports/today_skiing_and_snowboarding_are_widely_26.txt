@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T16:38:42
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Today, skiing and snowboarding are widely used as personal transportation tools on snow. But to use them, a lot of skill and experience are required, which a user normally cannot learn in one day. Moreover, skis and snowboards cannot run uphill because they are moved by gravity. You are a designer, and your task is to design alternative personal tools for snow transport.
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This transit platform can thoughtfully integrate user energy and surface engagement to create intuitive stable locomotion that effectively traverses soft environments without causing excessive structural strain. Designed to handle continuous physical exertion, these dynamic systems seamlessly blend path modulation and kinetic dampening to optimize travel-oriented linear displacement and ensure rapid directional changes. To ensure practical manufacturing, modular components like primary support surfaces, interactive interfaces, and high-friction contact zones can be configured to guarantee constant stable momentum and remarkable operational safety. A highly adaptable interface layout allows users to translate biological effort into predictable propulsive output, actively maximizing system efficiency while minimizing structural strain. Ultimately, by exploring distinct physical behaviors and accessible material resources, the design delivers a reliable, inventive, and truly affordable mobility solution.
+
+MC Stimulus:
+This transit platform can thoughtfully integrate lever action and traction systems to create intuitive controlled movement that effectively traverses varied terrains without causing excessive frame stress. Designed to handle continuous reciprocating force, these mobility devices seamlessly blend steering logic and friction pads to optimize travel-oriented locomotion speed and ensure rapid lateral steering. To ensure practical manufacturing, support elements like internal structural platforms, control modules, and treaded track belts can be configured to guarantee constant steady progress and remarkable user control. A highly adaptable cockpit design allows users to translate manual inputs into predictable driving torque, actively maximizing handling ease while minimizing frame stress. Ultimately, by exploring distinct functional layouts and accessible production methods, the design delivers a reliable, inventive, and truly affordable transport device.
+
+VC Stimulus:
+This transit platform can thoughtfully integrate handlebar grips and serrated tracks to create intuitive reliable travel that effectively traverses packed paths without causing excessive chassis wear. Designed to handle continuous pumping motions, these personal vehicles seamlessly blend steering wheels and friction brakes to optimize travel-oriented forward speed and ensure rapid sharp turning. To ensure practical manufacturing, structural parts like plastic seating decks, hand grips, and steel-toothed grip chains can be configured to guarantee constant solid footing and remarkable ride balance. A highly adaptable seating setup allows users to translate pedal strokes into predictable forward thrust, actively maximizing travel comfort while minimizing chassis wear. Ultimately, by exploring distinct design features and accessible factory plastics, the design delivers a reliable, inventive, and truly affordable personal carrier.

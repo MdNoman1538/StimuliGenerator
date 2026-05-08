@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:21:17
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This handling system can thoughtfully integrate static stabilization and torsional displacement to create an intuitive framework that effectively unseals coupled masses without compromising the system boundaries. Designed to handle independent energy exertion, these systems seamlessly blend friction and torque to optimize single-sided force transmission and ensure rapid cognitive mapping. To ensure practical manufacturing, constraints like kinetic inhibitors, load multipliers, and contact interfaces can be configured to guarantee constant spatial fixation and remarkable energy conversion. A highly adaptable interaction locus allows users to translate unilateral torque into controlled bond separation, actively maximizing kinetic efficiency while minimizing boundary fracturing. Ultimately, by exploring distinct dynamic topologies and accessible material properties, the design delivers a reliable, inventive, and truly affordable functional system.
+
+MC Stimulus:
+This handling system can thoughtfully integrate base clamping and rotational leverage to create an intuitive mechanism that effectively unseals cylindrical vessels without compromising the container walls. Designed to handle independent task execution, these assemblies seamlessly blend fastening and gearing to optimize single-sided mechanical advantage and ensure rapid operational fluency. To ensure practical manufacturing, linkages like compression bands, pivot arms, and gripping jaws can be configured to guarantee constant securing pressure and remarkable output rotation. A highly adaptable control linkage allows users to translate asymmetric turning into controlled radial unlocking, actively maximizing ergonomic leverage while minimizing wall crushing. Ultimately, by exploring distinct structural layouts and accessible standard fittings, the design delivers a reliable, inventive, and truly affordable daily device.
+
+VC Stimulus:
+This handling system can thoughtfully integrate rubber grips and turning handles to create an intuitive appliance that effectively unseals glass bottles without compromising the glass bodies. Designed to handle independent daily usage, these tools seamlessly blend suction and ratchets to optimize single-sided lid removal and ensure rapid skill mastery. To ensure practical manufacturing, hardware like silicone mats, steel levers, and plastic teeth can be configured to guarantee constant slip resistance and remarkable twisting power. A highly adaptable handle grip allows users to translate arm twisting into controlled cap unscrewing, actively maximizing opening success while minimizing glass shattering. Ultimately, by exploring distinct molded shapes and accessible nylon brackets, the design delivers a reliable, inventive, and truly affordable kitchen gadget.

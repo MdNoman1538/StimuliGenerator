@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T15:20:51
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Today, skiing and snowboarding are widely used as personal transportation tools on snow. But to use them, a lot of skill and experience are required, which a user normally cannot learn in one day. Moreover, skis and snowboards cannot run uphill because they are moved by gravity. You are a designer, and your task is to design alternative personal tools for snow transport.
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This innovative system can thoughtfully integrate kinetic inputs and spatial balance to create specialized dynamic flows that effectively facilitate surface transit without compromising the biological health. Designed to handle continuous oscillating forces, these spatial systems seamlessly blend surface adhesion and resistive dissipation to optimize overall volumetric passage and ensure rapid system adjustments. To ensure practical manufacturing, modular units like rigid members, load distributors, and contact interfaces can be configured to guarantee constant spatial orientation and remarkable material resilience. A highly adaptable energetic junction allows users to translate physical exertion into fluid directional velocity, actively maximizing operational ease while minimizing biological strain. Ultimately, by exploring distinct spatial configurations and accessible foundational substances, the design delivers a reliable, inventive, and truly affordable mobility solution.
+
+MC Stimulus:
+This innovative system can thoughtfully integrate pedal mechanisms and structural stability to create specialized mobile frameworks that effectively facilitate ground navigation without compromising the musculoskeletal safety. Designed to handle continuous cyclic motions, these functional assemblies seamlessly blend friction management and deceleration control to optimize overall linear progression and ensure rapid directional steering. To ensure practical manufacturing, chassis components like frame sections, support brackets, and traction modules can be configured to guarantee constant navigational accuracy and remarkable structural integrity. A highly adaptable control mechanism allows users to translate manual manipulation into fluid propelled locomotion, actively maximizing intuitive handling while minimizing musculoskeletal stress. Ultimately, by exploring distinct mechanical layouts and accessible industrial feedstock, the design delivers a reliable, inventive, and truly affordable transport device.
+
+VC Stimulus:
+This innovative system can thoughtfully integrate aluminum cranksets and wide platforms to create specialized tracked vehicles that effectively facilitate winter travel without compromising the joint protection. Designed to handle continuous leg strides, these steerable chassis seamlessly blend spiked treads and rubber grips to optimize overall travel speed and ensure rapid guided turns. To ensure practical manufacturing, heavy hardware like steel tubes, nylon straps, and plastic runners can be configured to guarantee constant tracking accuracy and remarkable weld strength. A highly adaptable steering unit allows users to translate lever pumping into fluid forward glide, actively maximizing simple control while minimizing joint pain. Ultimately, by exploring distinct frame geometry and accessible standard parts, the design delivers a reliable, inventive, and truly affordable terrain cruiser.

@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-07T15:40:12
+Model: gemini-3-flash-preview
+Condition: text + BOTH
+Task: Today, skiing and snowboarding are widely used as personal transportation tools on snow. But to use them, a lot of skill and experience are required, which a user normally cannot learn in one day. Moreover, skis and snowboards cannot run uphill because they are moved by gravity. You are a designer, and your task is to design alternative personal tools for snow transport.
+Requirements:
+  - The design must be human-powered (powered by the user himself or herself) so that it can run without help from an engine or gravity
+  - The design must allow the user to control direction and braking
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This maneuverable transit system can thoughtfully integrate internal bio-mechanical energy and directional orientation to produce versatile dynamic displacement that effectively traverses granular media without causing any physiological exhaustion. Designed for continuous energetic throughput, these systemic configurations seamlessly blend frictional interaction and motive transfer to optimize gradient ascension and ensure rapid kinetic dissipation. To ensure practical manufacturing, primary subsystems like load distributors, interface modules, and traction oscillators are configured to guarantee constant equilibrium maintenance and remarkable endurance properties. A highly adaptable interactive interface allows users to translate natural impulses into responsive navigational change, maximizing skill acquisition while minimizing physiological exhaustion. Ultimately, by exploring distinct abstract topologies and essential substances, the design delivers a reliable, inventive, and affordable mobility system.
+
+MC Stimulus:
+This maneuverable transit system can thoughtfully integrate applied kinetic force and steering mechanisms to produce versatile platform locomotion that effectively traverses frozen substrates without causing any muscular fatigue. Designed for continuous physical exertion, these structural assemblies seamlessly blend contact grip and driving torque to optimize vertical climbing and ensure rapid motion deceleration. To ensure practical manufacturing, mechanical elements like support frames, gear housings, and rotary linkages are configured to guarantee constant positional balance and remarkable hardware lifespan. A highly adaptable steering console allows users to translate intuitive movements into responsive precise maneuvers, maximizing operational learning while minimizing muscular fatigue. Ultimately, by exploring distinct mechanical layouts and standard components, the design delivers a reliable, inventive, and affordable transit machine.
+
+VC Stimulus:
+This maneuverable transit system can thoughtfully integrate muscular leg power and handlebar assemblies to produce versatile surface travel that effectively traverses soft powder without causing any limb soreness. Designed for continuous steady pedaling, these frame architectures seamlessly blend studded treads and chain drives to optimize uphill progress and ensure rapid stopping capability. To ensure practical manufacturing, tangible hardware like aluminum tubes, rubber belts, and nylon claws are configured to guarantee constant rider uprightness and remarkable part durability. A highly adaptable grip controller allows users to translate simple gestures into responsive sharp turns, maximizing beginner mastery while minimizing limb soreness. Ultimately, by exploring distinct product prototypes and stock materials, the design delivers a reliable, inventive, and affordable personal vehicle.

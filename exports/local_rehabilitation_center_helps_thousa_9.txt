@@ -1,0 +1,19 @@
+Design Stimuli Report
+============================================================
+Generated: 2026-05-08T01:08:17
+Model: gemini-3.1-pro-preview
+Condition: image + BOTH
+Task: Local rehabilitation center helps thousands of stroke patients each year. Many stroke patients are unable to perform bilateral tasks, meaning they have limited or no use of one upper extremity (arm/shoulder). Being able to open jars and lidded food containers is important for living independently. You are a designer, and your task is to design a personal tool that helps patients open lidded food containers
+Requirements:
+  - The design must be operable with only one hand (powered by the user's single functional upper extremity) so that it can be used without assistance from another person
+  - The design must allow the user to hold the container and twist or remove the lid
+  - It shouldn’t require much time to learn how to use it
+
+NC Stimulus:
+This device can thoughtfully integrate friction and resistance to create an accessible system that effectively stabilizes the target mass without causing damage to the contained volume. Designed to handle unilateral energy, these pathways seamlessly blend static tension and dynamic torque to optimize rotational displacement and ensure rapid extraction. To ensure practical manufacturing, variables like contact areas, load pathways, and force vectors can be configured to guarantee constant equilibrium and remarkable efficiency. A highly adaptable interface allows users to translate muscular output into productive work, actively maximizing release while minimizing volume deformation. Ultimately, by exploring distinct geometries and accessible properties, the design delivers a reliable, inventive, and truly affordable solution.
+
+MC Stimulus:
+This device can thoughtfully integrate clamping and leverage to create an accessible mechanism that effectively stabilizes the lower base without causing damage to the structural shell. Designed to handle unilateral actuation, these linkages seamlessly blend holding force and twisting motion to optimize rotational separation and ensure rapid detachment. To ensure practical manufacturing, modules like gripping jaws, pivot joints, and gear drives can be configured to guarantee constant alignment and remarkable functionality. A highly adaptable controller allows users to translate arm movement into productive travel, actively maximizing unsealing while minimizing shell crushing. Ultimately, by exploring distinct assemblies and accessible components, the design delivers a reliable, inventive, and truly affordable apparatus.
+
+VC Stimulus:
+This device can thoughtfully integrate rubber and brackets to create an accessible tool that effectively stabilizes the storage vessel without causing damage to the outer casing. Designed to handle unilateral pushing, these handles seamlessly blend grip tape and turning knobs to optimize rotational unscrewing and ensure rapid removal. To ensure practical manufacturing, parts like silicone pads, steel hinges, and plastic levers can be configured to guarantee constant steadiness and remarkable usefulness. A highly adaptable grip allows users to translate hand squeezing into productive turning, actively maximizing opening while minimizing casing cracking. Ultimately, by exploring distinct hardware and accessible materials, the design delivers a reliable, inventive, and truly affordable product.
