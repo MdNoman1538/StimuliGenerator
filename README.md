@@ -4,6 +4,8 @@ A guideline-driven system for generating semantic text and image stimuli with la
 
 This repository is the implementation artefact accompanying the master's thesis *Semantic Stimuli Generation with Large Language Models: A System for Augmenting Design Creativity* (Md Abdullah Al Noman, supervised by Dr. Georgi Georgiev, University of Oulu).
 
+> **Companion repository:** the evaluation data and reproduction scripts for every numerical result in Chapter 4 of the thesis are published separately at [MdNoman1538/thesis-evaluation-data](https://github.com/MdNoman1538/thesis-evaluation-data).
+
 ## What it does
 
 Given a design task description and a list of requirements, the system produces:
