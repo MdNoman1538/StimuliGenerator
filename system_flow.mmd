@@ -1,0 +1,60 @@
+flowchart LR
+  User[User / Client] -->|HTTP (POST/GET)| Frontend[Browser / Client]
+  Frontend -->|requests| FastAPI[FastAPI app\n(main.py)]
+
+  subgraph API[Application]
+    direction TB
+    Router[APIRouter (routes.py)]
+    Router --> Generate[/POST /generate]
+    Router --> GenerateImages[/POST /generate-images]
+    Router --> Describe[/POST /describe-images]
+    Router --> ServeImage[/GET /images/{filename}]
+    Router --> Export[/GET /exports/{filename}]
+  end
+
+  FastAPI --> Router
+
+  subgraph Backend[Services]
+    direction LR
+    GeminiClient[gemini_client.py\n(select_text_model, generate, describe_image)]
+    ImageGen[image_generator.py\n(generate_paired_images)]
+    Parser[parser.py\n(extract_three_stimuli, parse_sentences)]
+    Logger[logger.py\n(session_scope, current_session)]
+    Prompt[system_prompt.py / image_system_prompt.py]
+  end
+
+  Generate -->|build prompt via| Prompt
+  Generate -->|call| GeminiClient
+  GeminiClient -->|text output| Parser
+  Parser -->|validated stimuli| Router
+  Generate -->|log & export| Logs[generation_log.jsonl / exports/]
+
+  GenerateImages -->|generate stimuli (text)| GeminiClient
+  GenerateImages -->|nc/vc sentences| ImageGen
+  ImageGen -->|call image model| GeminiClient
+  ImageGen -->|save images| FS[generated_images/]
+  GenerateImages -->|log & export| Logs
+  ServeImage --> FS
+  Export --> FS
+
+  Describe -->|save uploads| Uploads[uploaded_images/]
+  Describe -->|parallel calls| GeminiClient
+  GeminiClient -->|descriptions| SSE[Server-Sent Events stream]
+  SSE --> Frontend
+  Describe -->|save descriptions| Uploads
+
+  subgraph Storage[File system]
+    exports_dir[exports/]
+    gen_images[generated_images/]
+    uploads[uploaded_images/]
+    logs[generation_log.jsonl\nstimuli_log.jsonl\nimage_gen_timings.jsonl]
+  end
+
+  Logs --> logs
+  FS --> gen_images
+  Uploads --> uploads
+  Router -->|write| exports_dir
+
+  note right of GeminiClient: Model selection + fallback
+  note left of ImageGen: Multi‑step paired image pipeline
+  note bottom of Router: GEMINI_HARD_TIMEOUT_S and session logging
